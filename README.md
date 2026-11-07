@@ -8,11 +8,11 @@ PricePad is a clean, simple, and fully functional Web3 pricing application desig
 
 ## Features
 
-- **Decentralized Price Records**: Create verifiable, immutable pricing records directly on the **Botchain Testnet**.
+- **Decentralized Price Records**: Create verifiable, immutable pricing records directly on the **Botchain Mainnet**.
 - **Unique Numeric IDs**: Every record receives an easy-to-read sequential ID (e.g., `#1`, `#2`, `#3`) that can be copied with one click.
 - **Customer Lookup Without a Wallet**: Customers can paste any Record ID and retrieve details immediately via direct RPC reads.
 - **Creator Access Controls**: Smart contract enforces that only the record creator can mark an offer as **Accepted** or **Rejected**.
-- **Wallet & Network Integration**: Automatic network switching to Botchain Testnet (Chain ID `968`), MetaMask compatibility, and clear transaction lifecycle states.
+- **Wallet & Network Integration**: Automatic network switching to Botchain Mainnet (Chain ID `677`), MetaMask compatibility, and clear transaction lifecycle states.
 - **Dark Charcoal Minimalist UI**: Crafted with Tailwind CSS using dark charcoal surfaces with muted purple and green accents.
 
 ---
@@ -34,11 +34,12 @@ PricePad is a clean, simple, and fully functional Web3 pricing application desig
 
 | Parameter | Value |
 | :--- | :--- |
-| **Network** | Botchain Testnet |
-| **Chain ID** | `968` |
-| **RPC Endpoint** | `https://rpc.bohr.life` |
-| **Block Explorer** | [https://scan.bohr.life](https://scan.bohr.life) |
-| **Currency** | `BHR` |
+| **Network** | Botchain Mainnet |
+| **Chain ID** | `677` |
+| **RPC Endpoint** | `https://rpc.botchain.ai` |
+| **Block Explorer** | [https://scan.botchain.ai](https://scan.botchain.ai) |
+| **Deployed Contract** | [`0x547b29eB85705c4781FcdD935A97aC7024924CE6`](https://scan.botchain.ai/address/0x547b29eB85705c4781FcdD935A97aC7024924CE6#code) |
+| **Currency** | `BOT` |
 
 ---
 
@@ -90,13 +91,13 @@ pricepad/
 ├── contracts/
 │   └── PricePad.sol         # Solidity smart contract
 ├── lib/
-│   ├── chains.ts            # Botchain Testnet chain definition
+│   ├── chains.ts            # Botchain Mainnet chain definition (Chain ID 677)
 │   ├── contract.ts          # Contract ABI & address resolver
 │   ├── types.ts             # TypeScript interfaces & enums
 │   ├── utils.ts             # Price, date, address, and error formatters
 │   └── wagmi.ts             # Wagmi client configuration
 ├── scripts/
-│   └── deploy.js            # Hardhat deployment script for Botchain
+│   └── deploy.js            # Hardhat deployment script for Botchain Mainnet
 ├── test/
 │   └── PricePad.test.js     # Comprehensive smart contract test suite
 ├── hardhat.config.js        # Hardhat configuration (Solidity 0.8.20)
@@ -126,15 +127,15 @@ cp .env.example .env.local
 Fill in your configuration:
 ```env
 # Deployment private key (keep secret!)
-PRIVATE_KEY=your_testnet_private_key_without_0x_or_with_0x
+PRIVATE_KEY=your_private_key_without_0x_or_with_0x
 
-# Botchain Testnet
-NEXT_PUBLIC_CHAIN_ID=968
-NEXT_PUBLIC_RPC_URL=https://rpc.bohr.life
-NEXT_PUBLIC_EXPLORER_URL=https://scan.bohr.life
+# Botchain Mainnet
+NEXT_PUBLIC_CHAIN_ID=677
+NEXT_PUBLIC_RPC_URL=https://rpc.botchain.ai
+NEXT_PUBLIC_EXPLORER_URL=https://scan.botchain.ai
 
-# Deployed Contract Address
-NEXT_PUBLIC_CONTRACT_ADDRESS=0x...
+# Deployed Contract Address on Botchain Mainnet
+NEXT_PUBLIC_CONTRACT_ADDRESS=0x547b29eB85705c4781FcdD935A97aC7024924CE6
 ```
 
 ---
@@ -160,16 +161,16 @@ Tests cover:
 
 ---
 
-## Deploying to Botchain Testnet
+## Deploying to Botchain Mainnet
 
-1. Ensure your deployer account on Botchain Testnet has `BHR` testnet funds.
+1. Ensure your deployer account on Botchain Mainnet has `BOT` balance.
 2. Run the deployment script:
 
 ```bash
 npm run deploy
 ```
 
-The script will automatically output the contract address and write `NEXT_PUBLIC_CONTRACT_ADDRESS` to `.env.local`.
+The script will automatically output the contract address, verify gas usage, write `NEXT_PUBLIC_CONTRACT_ADDRESS` to `.env.local`, and save `deployment.json`.
 
 ---
 
@@ -189,12 +190,3 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 npm run build
 npm start
 ```
-
----
-
-## Security & Privacy Considerations
-
-- **No Off-Chain Sensitive Data**: No customer personal identities, phone numbers, or passwords are stored.
-- **On-Chain Enforcement**: Creator access permissions and state transition guards are strictly verified in EVM bytecode via custom errors.
-- **Read Decoupling**: Record lookups are public and do not prompt users for signatures or wallet authorizations.
-

@@ -134,7 +134,7 @@ export function CreateRecord({ onSuccess }: CreateRecordProps) {
           <Sparkles className="w-8 h-8 text-purple-400/60 mx-auto mb-2" />
           <p className="text-sm text-zinc-300 font-medium">Wallet Not Connected</p>
           <p className="text-xs text-zinc-500 mt-1 max-w-sm mx-auto">
-            Connect your MetaMask or Web3 wallet to generate and manage price records on the Botchain Testnet.
+            Connect your MetaMask or Web3 wallet to generate and manage price records on Botchain Mainnet.
           </p>
         </div>
       ) : (
@@ -168,7 +168,7 @@ export function CreateRecord({ onSuccess }: CreateRecordProps) {
 
           <div>
             <label className="block text-xs font-medium text-zinc-300 mb-1.5">
-              Price (BHR) <span className="text-purple-400">*</span>
+              Price (BOT) <span className="text-purple-400">*</span>
             </label>
             <div className="relative">
               <input
@@ -176,13 +176,13 @@ export function CreateRecord({ onSuccess }: CreateRecordProps) {
                 step="any"
                 min="0.000000000000000001"
                 required
-                placeholder="0.5"
+                placeholder="10.0"
                 value={price}
                 onChange={(e) => setPrice(e.target.value)}
                 className="w-full pl-3.5 pr-14 py-2.5 rounded-xl bg-[#101117] border border-[#2d2f42] text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-purple-500/60 focus:ring-1 focus:ring-purple-500/40 transition-all"
               />
               <span className="absolute right-3.5 top-1/2 -translate-y-1/2 text-xs font-semibold text-zinc-400 pointer-events-none">
-                BHR
+                BOT
               </span>
             </div>
           </div>
@@ -258,7 +258,7 @@ export function CreateRecord({ onSuccess }: CreateRecordProps) {
             <div className="flex items-center justify-between text-xs pt-1">
               <span className="text-zinc-400">Transaction receipt:</span>
               <a
-                href={`https://scan.bohr.life/tx/${txHash}`}
+                href={`https://scan.botchain.ai/tx/${txHash}`}
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-1 text-purple-400 hover:text-purple-300 underline underline-offset-2 transition-colors"
@@ -282,4 +282,3 @@ export function CreateRecord({ onSuccess }: CreateRecordProps) {
     </div>
   );
 }
-

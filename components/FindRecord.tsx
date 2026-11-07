@@ -2,11 +2,11 @@
 
 import React, { useState } from "react";
 import { createPublicClient, http } from "viem";
-import { botchainTestnet } from "@/lib/chains";
+import { botchainMainnet } from "@/lib/chains";
 import { PRICEPAD_ABI, getContractAddress } from "@/lib/contract";
 import { StatusBadge } from "./StatusBadge";
 import { shortenAddress, formatPrice, formatDate, parseContractError } from "@/lib/utils";
-import { Search, Loader2, AlertCircle, Calendar, User, Tag, FileText, Check, Copy } from "lucide-react";
+import { Search, Loader2, AlertCircle, Calendar, User, Tag, Check, Copy } from "lucide-react";
 
 interface RecordData {
   id: bigint;
@@ -42,8 +42,8 @@ export function FindRecord() {
 
     try {
       const publicClient = createPublicClient({
-        chain: botchainTestnet,
-        transport: http("https://rpc.bohr.life"),
+        chain: botchainMainnet,
+        transport: http("https://rpc.botchain.ai"),
       });
 
       const contractAddress = getContractAddress();
@@ -209,4 +209,3 @@ export function FindRecord() {
     </div>
   );
 }
-

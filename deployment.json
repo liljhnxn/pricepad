@@ -1,6 +1,8 @@
 {
-  "address": "0xaE1D1e7b8F8Ae8210BFaaa63BdF93635211ba9E0",
-  "network": "botchain",
-  "chainId": 968,
-  "deployedAt": "2026-11-01T15:01:56.774Z"
+  "address": "0x547b29eB85705c4781FcdD935A97aC7024924CE6",
+  "network": "botchainMainnet",
+  "chainId": 677,
+  "rpcUrl": "https://rpc.botchain.ai",
+  "explorerUrl": "https://scan.botchain.ai",
+  "deployedAt": "2026-11-07T04:58:03.247Z"
 }

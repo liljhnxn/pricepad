@@ -11,9 +11,9 @@
 
 Customers can review, inspect, and verify the agreed-upon scope and pricing directly on-chain without needing a cryptocurrency wallet or Web3 expertise. Meanwhile, service providers retain sovereign, smart-contract-enforced control over the lifecycle of their quotes (Available, Accepted, Rejected).
 
-* **Live Deployment**: Botchain Testnet (Chain ID `968`)
-* **Contract Address**: `0xaE1D1e7b8F8Ae8210BFaaa63BdF93635211ba9E0`
-* **Explorer Verification**: [scan.bohr.life/address/0xaE1D1e7b8F8Ae8210BFaaa63BdF93635211ba9E0#code](https://scan.bohr.life/address/0xaE1D1e7b8F8Ae8210BFaaa63BdF93635211ba9E0#code)
+* **Live Deployment**: Botchain Mainnet (Chain ID `677`)
+* **Contract Address**: `0x547b29eB85705c4781FcdD935A97aC7024924CE6`
+* **Explorer Verification**: [scan.botchain.ai/address/0x547b29eB85705c4781FcdD935A97aC7024924CE6#code](https://scan.botchain.ai/address/0x547b29eB85705c4781FcdD935A97aC7024924CE6#code)
 * **GitHub Repository**: [github.com/liljhnxn/pricepad](https://github.com/liljhnxn/pricepad)
 
 ---
@@ -47,7 +47,7 @@ PricePad provides an elegant, minimalist balance:
 | **Integrity** | Immutable proof of quoted terms and price | Assurance that quoted terms cannot be silently modified |
 | **Simplicity** | One-page dashboard to track all created quotes | Instant lookup by entering a simple numeric ID |
 | **Accessibility** | Works with standard Web3 wallets (MetaMask) | No wallet or crypto needed to view records |
-| **Cost Efficiency** | Low gas footprint on Botchain Testnet | Zero cost to verify quotes |
+| **Cost Efficiency** | Minimal gas footprint on Botchain Mainnet | Zero cost to verify quotes |
 
 ---
 
@@ -69,7 +69,7 @@ PricePad provides an elegant, minimalist balance:
 * **Type Safety**: End-to-end TypeScript
 * **Design System**: Tailwind CSS (dark charcoal theme `#0f1015` with muted purple and emerald accents)
 * **Blockchain Interactivity**: `wagmi v2` and `viem` for optimized RPC calls and state caching
-* **Web3 Integration**: Injected EIP-1193 connector (MetaMask) with automatic Botchain Testnet (Chain ID 968) network switching
+* **Web3 Integration**: Injected EIP-1193 connector (MetaMask) with automatic Botchain Mainnet (Chain ID 677) network switching
 
 ---
 
@@ -79,7 +79,7 @@ PricePad adopts a utility-first expansion model:
 
 1. **Protocol Micro-Fees (Future)**: Optional nominal micro-fee upon contract quote creation or escrow settlement.
 2. **Featured & Verified Creator Badges**: Optional on-chain reputation score for freelancers with proven completion records.
-3. **Escrow & Milestone Settlement**: Optional smart-contract-secured payments held until milestones are approved by the client.
+3. **Escrow & Milestone Settlement**: Optional smart-contract-secured payments held until milestones are approved by the client in BOT.
 
 ---
 
@@ -88,8 +88,8 @@ PricePad adopts a utility-first expansion model:
 ```text
 Phase 1: Foundation (Completed)
 ├── Core Smart Contract Design & Hardhat Testing
-├── Botchain Testnet Deployment (0xaE1D1...)
-├── On-Chain Explorer Verification
+├── Botchain Mainnet Deployment (0x547b29eB85705c4781FcdD935A97aC7024924CE6)
+├── On-Chain Explorer Verification on scan.botchain.ai
 └── Fully Functional Next.js 14 Frontend
 
 Phase 2: Client Engagement (Q1 2027)
@@ -98,8 +98,7 @@ Phase 2: Client Engagement (Q1 2027)
 ├── Automated PDF/Receipt Export from on-chain event logs
 
 Phase 3: Settlement & Ecosystem (Q2 2027)
-├── Milestone-based Escrow Payments in BHR & stablecoins
-├── Multi-Chain Deployment (Botchain Mainnet)
+├── Milestone-based Escrow Payments in BOT & stablecoins
 ├── Freelancer Portfolio & Verified Rating System
 ```
 
@@ -108,7 +107,7 @@ Phase 3: Settlement & Ecosystem (Q2 2027)
 ## 8. Verification & Live Links
 
 * **Whitepaper & Pitch Cloud Link**: [https://github.com/liljhnxn/pricepad/blob/main/WHITEPAPER.md](https://github.com/liljhnxn/pricepad/blob/main/WHITEPAPER.md)
-* **Smart Contract Code**: [https://scan.bohr.life/address/0xaE1D1e7b8F8Ae8210BFaaa63BdF93635211ba9E0#code](https://scan.bohr.life/address/0xaE1D1e7b8F8Ae8210BFaaa63BdF93635211ba9E0#code)
+* **Smart Contract Code**: [https://scan.botchain.ai/address/0x547b29eB85705c4781FcdD935A97aC7024924CE6#code](https://scan.botchain.ai/address/0x547b29eB85705c4781FcdD935A97aC7024924CE6#code)
 * **Source Repository**: [https://github.com/liljhnxn/pricepad](https://github.com/liljhnxn/pricepad)
-* **Network**: Botchain Testnet (Chain ID `968`)
-* **RPC Endpoint**: `https://rpc.bohr.life`
+* **Network**: Botchain Mainnet (Chain ID `677`)
+* **RPC Endpoint**: `https://rpc.botchain.ai`

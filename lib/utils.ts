@@ -11,11 +11,11 @@ export function formatPrice(weiAmount?: bigint): string {
     const formatted = formatEther(weiAmount);
     // Trim trailing zeros after decimal if sensible, but keep 2 or more decimals if needed
     const parts = formatted.split(".");
-    if (parts.length === 1) return `${parts[0]} BHR`;
+    if (parts.length === 1) return `${parts[0]} BOT`;
     const decimals = parts[1].slice(0, 4);
-    return `${parts[0]}.${decimals} BHR`;
+    return `${parts[0]}.${decimals} BOT`;
   } catch {
-    return `${weiAmount.toString()} BHR`;
+    return `${weiAmount.toString()} BOT`;
   }
 }
 
@@ -50,4 +50,3 @@ export function parseContractError(error: unknown): string {
   }
   return errStr;
 }
-

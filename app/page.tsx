@@ -21,9 +21,9 @@ export default function Home() {
       <main className="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-8 sm:py-10 space-y-8">
         {/* Hero Section */}
         <div className="text-center max-w-2xl mx-auto pt-2 pb-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-950/60 border border-purple-800/40 text-purple-300 text-xs font-medium mb-3 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-800/40 text-emerald-300 text-xs font-medium mb-3 shadow-sm">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-            <span>Live on Botchain Testnet (Chain ID 968)</span>
+            <span>Live on Botchain Mainnet (Chain ID 677)</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
             Transparent On-Chain <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-emerald-400">Pricing Records</span>
@@ -88,7 +88,7 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-4">
             <a
-              href="https://scan.bohr.life"
+              href="https://scan.botchain.ai"
               target="_blank"
               rel="noreferrer"
               className="hover:text-purple-400 transition-colors"
@@ -96,7 +96,7 @@ export default function Home() {
               Botchain Explorer
             </a>
             <a
-              href="https://rpc.bohr.life"
+              href="https://rpc.botchain.ai"
               target="_blank"
               rel="noreferrer"
               className="hover:text-purple-400 transition-colors"
@@ -109,4 +109,3 @@ export default function Home() {
     </div>
   );
 }
-
