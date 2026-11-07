@@ -64,8 +64,7 @@ async function main() {
 
   const chainId = hre.network.config.chainId || 677;
   const rpcUrl = hre.network.config.url || "https://rpc.botchain.ai";
-  const explorerUrl =
-    chainId === 677 ? "https://scan.botchain.ai" : "https://scan.bohr.life";
+  const explorerUrl = "https://scan.botchain.ai";
 
   // Update NEXT_PUBLIC_CONTRACT_ADDRESS
   if (envContent.includes("NEXT_PUBLIC_CONTRACT_ADDRESS=")) {

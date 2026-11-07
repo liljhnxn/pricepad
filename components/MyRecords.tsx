@@ -163,7 +163,7 @@ export function MyRecords({ refreshTrigger }: { refreshTrigger?: number }) {
       {isLoadingRecords ? (
         <div className="py-12 flex flex-col items-center justify-center gap-3 text-zinc-400">
           <Loader2 className="w-6 h-6 animate-spin text-purple-400" />
-          <p className="text-xs">Fetching your price records from Botchain...</p>
+          <p className="text-xs">Fetching your price records from BOT Chain...</p>
         </div>
       ) : records.length === 0 ? (
         <div className="text-center py-12 px-4 border border-dashed border-[#27293a] rounded-xl bg-[#111218]">

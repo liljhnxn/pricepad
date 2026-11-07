@@ -30,11 +30,6 @@ module.exports = {
       chainId: 677,
       accounts: [PRIVATE_KEY],
     },
-    botchainTestnet: {
-      url: "https://rpc.bohr.life",
-      chainId: 968,
-      accounts: [PRIVATE_KEY],
-    },
     botchain: {
       url: "https://rpc.botchain.ai",
       chainId: 677,
@@ -45,7 +40,6 @@ module.exports = {
     apiKey: {
       botchainMainnet: "empty",
       botchain: "empty",
-      botchainTestnet: "empty",
     },
     customChains: [
       {
@@ -62,14 +56,6 @@ module.exports = {
         urls: {
           apiURL: "https://scan.botchain.ai/api",
           browserURL: "https://scan.botchain.ai",
-        },
-      },
-      {
-        network: "botchainTestnet",
-        chainId: 968,
-        urls: {
-          apiURL: "https://scan.bohr.life/api",
-          browserURL: "https://scan.bohr.life",
         },
       },
     ],

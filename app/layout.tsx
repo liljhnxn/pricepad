@@ -5,7 +5,7 @@ import { Providers } from "./providers";
 export const metadata: Metadata = {
   title: "PricePad | Simple pricing. Easy sharing.",
   description:
-    "Decentralized pricing and service records for freelancers and small businesses on Botchain Testnet.",
+    "Decentralized pricing and service records for freelancers and small businesses on BOT Chain.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
