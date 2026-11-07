@@ -118,7 +118,7 @@ export const PRICEPAD_ABI = [
 
 export const DEFAULT_CONTRACT_ADDRESS =
   (process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as `0x${string}`) ||
-  "0x0000000000000000000000000000000000000000";
+  "0x547b29eB85705c4781FcdD935A97aC7024924CE6";
 
 export function getContractAddress(): `0x${string}` {
   return (
